@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import './Signup.css';
+import './Login.css';
 
-const Signup = () => {
+const Login = () => {
   const [user, setUser] = useState({
-    username: '',
     email: '',
     password: '',
   });
@@ -19,18 +18,8 @@ const Signup = () => {
 
   return (
     <div>
-      <h3 className="page-heading">Sign Up</h3>
-      <form onSubmit={handleSubmit} className="signup-form">
-        <input
-          id="username"
-          placeholder="Username"
-          type="text"
-          name="username"
-          value={user.username}
-          onChange={handleChange}
-          required
-        />
-
+      <h3 className="page-heading">Log in</h3>
+      <form onSubmit={handleSubmit} className="login-form">
         <input
           id="email"
           placeholder="Email"
@@ -51,10 +40,10 @@ const Signup = () => {
           required
         />
 
-        <button type="submit">Sign Up</button>
+        <button type="submit">Log In</button>
       </form>
     </div>
   );
 };
 
-export default Signup;
+export default Login;

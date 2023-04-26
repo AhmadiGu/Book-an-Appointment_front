@@ -1,19 +1,15 @@
+/* Login component style */
+
 .page-heading {
   text-align: center;
-  margin-top: 50px;
 }
 
-.signup-form {
+.login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-label {
-  margin-top: 10px;
-  margin-bottom: 5px;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 input {
@@ -26,7 +22,7 @@ input {
 }
 
 button {
-  padding: 5px 10px;
+  padding: 10px 20px;
   background-color: #4caf50;
   color: white;
   border: none;
@@ -38,8 +34,10 @@ button:hover {
   background-color: #3e8e41;
 }
 
-@media (max-width: 480px) {
-  .signup-form {
+@media (max-width: 600px) {
+  /* Adjust layout for smaller screens */
+  .login-form {
+    margin-top: 20px;
     max-width: 300px;
   }
 
