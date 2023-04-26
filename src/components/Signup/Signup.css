@@ -1,7 +1,13 @@
+.page-heading {
+  text-align: center;
+  margin-top: 50px;
+}
+
 .signup-form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  align-items: center;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -16,6 +22,7 @@ input {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
+  max-width: 300px;
 }
 
 button {
@@ -29,4 +36,14 @@ button {
 
 button:hover {
   background-color: #3e8e41;
+}
+
+@media (max-width: 480px) {
+  .signup-form {
+    max-width: 300px;
+  }
+
+  input {
+    max-width: 250px;
+  }
 }

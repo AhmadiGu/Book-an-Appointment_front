@@ -18,39 +18,42 @@ const Signup = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="signup-form">
-      <input
-        id="username"
-        placeholder="Username"
-        type="text"
-        name="username"
-        value={user.username}
-        onChange={handleChange}
-        required
-      />
+    <div>
+      <h3 className="page-heading">Sign Up</h3>
+      <form onSubmit={handleSubmit} className="signup-form">
+        <input
+          id="username"
+          placeholder="Username"
+          type="text"
+          name="username"
+          value={user.username}
+          onChange={handleChange}
+          required
+        />
 
-      <input
-        id="email"
-        placeholder="Email"
-        type="email"
-        name="email"
-        value={user.email}
-        onChange={handleChange}
-        required
-      />
+        <input
+          id="email"
+          placeholder="Email"
+          type="email"
+          name="email"
+          value={user.email}
+          onChange={handleChange}
+          required
+        />
 
-      <input
-        id="password"
-        placeholder="Password"
-        type="password"
-        name="password"
-        value={user.password}
-        onChange={handleChange}
-        required
-      />
+        <input
+          id="password"
+          placeholder="Password"
+          type="password"
+          name="password"
+          value={user.password}
+          onChange={handleChange}
+          required
+        />
 
-      <button type="submit">Sign Up</button>
-    </form>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
   );
 };
 
