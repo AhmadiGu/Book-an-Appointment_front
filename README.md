@@ -1,70 +1,183 @@
-# Getting Started with Create React App
+<!-- TABLE OF CONTENTS -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📗 Table of Contents
 
-## Available Scripts
+<details>
+  <summary>📗 Table of Contents</summary>
+  <ul>
+    <li><a href="#-car-rental-front-end-">📖 Vesper</a></li>
+    <li><a href="#-built-with-">🛠 Built With</a></li>
+    <li><a href="#-getting-started-">💻 Getting Started</a></li>
+    <li><a href="#-authors-">👥 Authors </a></li>
+    <li><a href="#-future-features-">🔭 Future Features</a></li>
+    <li><a href="#-contributing-">🤝 Contributing</a></li>
+    <li><a href="#️-show-your-support-">⭐️ Show your support </a></li>
+    <li><a href="#-acknowledgments-">🙏 Acknowledgments </a></li>
+    <li><a href="#-license-">📝 License</a></li>
+  </ul>
+</details>
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+<!-- PROJECT DESCRIPTION -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📖 Book-an-Appointment <a name="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Book-an-Appointment** is a full stack application for all lovers of cars. Create an account, and become part of our car sharing economy. Let your car make money for you by listing it on our platform so others can view and rent. Find and book your dream car today.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Built With <a name="built-with"></a>
 
-### `npm run build`
+### Tech Stack <a name="tech-stack"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://react.dev/">React</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+    <li><a href="https://tailwindcss.com/">Tailwind</a></li>
+  </ul>
+</details>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Features -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Key Features <a name="key-features"></a>
 
-### `npm run eject`
+- User authentication
+- Users can view cars listed on the platform
+- Users can list and manage their own cars on the platform
+- Users can reserve cars listed on the platform
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- LIVE DEMO -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Live Demo Link]
 
-## Learn More
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🪵 Link to Backend <a name="key-features"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Backend](https://github.com/AhmadiGu/Book-an-Appointment_back)
 
-### Code Splitting
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🛹 Kanban Board <a name="key-features"></a>
 
-### Analyzing the Bundle Size
+- Kanban board link: [link](https://github.com/users/AhmadiGu/projects/6)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Making a Progressive Web App
+<!-- GETTING STARTED -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 💻 Getting Started <a name="getting-started"></a>
 
-### Advanced Configuration
+To get a local copy up and running, follow these steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Prerequisites
 
-### Deployment
+In order to run this project you need:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```sh
+ git
+ npm
+ Your favorite text editor
+```
 
-### `npm run build` fails to minify
+### Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clone this repository to your desired folder:
+
+```sh
+  git clone https://github.com/AhmadiGu/Book-an-Appointment_front.git
+```
+
+### Install
+
+Install this project with:
+
+```sh
+  cd Book-an-Appointment_front
+  npm install
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm run dev - Starts the development server
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Ahmadi**
+
+- GitHub: [@Ahmadi](https://github.com/AhmadiGu)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gulalai-ahamdi/)
+
+👤 **SekoViper**
+
+- GitHub: [@SekoViper](https://github.com/SekoViper)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/livingstone-dameh/)
+
+👤 **Abdelhafid**
+
+- GitHub: [@Nejjari001](https://github.com/Nejjari001)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdelhafid-nejjari/)
+
+👤 **Omarbabou**
+
+- GitHub: [@omarbabou](https://github.com/omarbabou)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/idrissa-makoba-omar/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] Add multi factor authentication
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project please leave a star🤩
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- [Microverse](https://www.microverse.org/)
+- Original design by [Murat Korkmaz](https://www.behance.net/muratk) on behance
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
