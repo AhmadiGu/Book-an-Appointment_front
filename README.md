@@ -5,7 +5,7 @@
 <details>
   <summary>📗 Table of Contents</summary>
   <ul>
-    <li><a href="#-car-rental-front-end-">📖 Vesper</a></li>
+    <li><a href="#-car-rental-front-end-">📖 Book-an-Appointment </a></li>
     <li><a href="#-built-with-">🛠 Built With</a></li>
     <li><a href="#-getting-started-">💻 Getting Started</a></li>
     <li><a href="#-authors-">👥 Authors </a></li>
@@ -35,7 +35,7 @@
   <ul>
     <li><a href="https://react.dev/">React</a></li>
     <li><a href="https://redux.js.org/">Redux</a></li>
-    <li><a href="https://tailwindcss.com/">Tailwind</a></li>
+    <li><a href="https://tailwindcss.com/">Bootstrap</a></li>
   </ul>
 </details>
 
