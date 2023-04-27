@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { createCar } from "../../redux/car/car";
-import "./Addcar.css";
+import "../Car/Addcars";
 import loader from "../../assets/loader2.gif";
 
 const AddCar = () => {
