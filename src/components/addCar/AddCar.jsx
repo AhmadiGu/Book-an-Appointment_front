@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { createCar } from '../../redux/car/car';
+import './addcar.css';
 import loader from '../../assets/loader2.gif';
 
 const AddCar = () => {
@@ -59,8 +60,13 @@ const AddCar = () => {
 
   return (
     <div className="form-container">
-      <form className="add-car-form" onSubmit={handleSubmit}>
-        <h2 className="title">Add A New Car</h2>
+      <form
+        className="add-car-form"
+        onSubmit={handleSubmit}
+      >
+        <h2 className="title">
+          Add A New Car
+        </h2>
         <div className="w-full">
           <input
             type="text"
@@ -118,9 +124,7 @@ const AddCar = () => {
           />
         </div>
         <div className="input-group mb-3">
-          <span className="input-group-text" id="basic-addon3">
-            Add an Image
-          </span>
+          <span className="input-group-text" id="basic-addon3">Add an Image</span>
           <input
             type="file"
             name="image"
@@ -131,9 +135,7 @@ const AddCar = () => {
           />
         </div>
         <div className="input-group mb-3">
-          <span className="input-group-text" id="basic-addon3">
-            Year
-          </span>
+          <span className="input-group-text" id="basic-addon3">Year</span>
           <input
             type="date"
             value={carData.year}
@@ -142,13 +144,13 @@ const AddCar = () => {
             className="form-control"
             required
           />
+
         </div>
-        <button type="submit" className="btn btn-primary mb-3">
-          {isLoading ? (
-            <img src={loader} alt="loading" className="spinner" />
-          ) : (
-            'Add Car'
-          )}
+        <button
+          type="submit"
+          className="btn btn-primary mb-3"
+        >
+          {isLoading ? <img src={loader} alt="loading" className="spinner" /> : 'Add Car'}
         </button>
       </form>
     </div>
