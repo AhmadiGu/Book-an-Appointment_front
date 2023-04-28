@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Signup from './components/Signup/Signup';
 
 import Header from './components/Nav/Header';
@@ -10,6 +6,7 @@ import Login from './components/Login/Login';
 import ReservationAdd from './components/Reservation/ReservationAdd';
 import ReservationNew from './components/Reservation/ReservationNew';
 import ReservedCars from './components/Reservation/ReservedCars';
+import Addcars from './components/Car/Addcars';
 
 function App() {
   return (
@@ -30,6 +27,14 @@ function App() {
 
           </Routes>
         </div>
+      </div>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/addcars" element={<Addcars />} />
+        </Routes>
       </div>
     </Router>
   );
