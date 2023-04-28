@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => (
-  <div className="header">
+  <>
     <h1>
       <NavLink to="/" className="logo">Tesla Cars Rental</NavLink>
     </h1>
@@ -18,9 +18,20 @@ const Header = () => (
         <li>
           <NavLink to="/login" activeClassName="active">Log in</NavLink>
         </li>
+        <li>
+          <NavLink to="reservations">Reservation</NavLink>
+        </li>
+        <li>
+          <NavLink to="reservedCars">My Reservations</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="new_reservations">New Reservation</NavLink>
+        </li>
+
       </ul>
     </nav>
-  </div>
+  </>
 );
 
 export default Header;
