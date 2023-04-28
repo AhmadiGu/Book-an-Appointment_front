@@ -25,16 +25,9 @@ function App() {
 
             <Route exact path="/reservedCars" element={<ReservedCars />} />
 
+            <Route exact path="/addcars" element={<Addcars />} />
           </Routes>
         </div>
-      </div>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/addcars" element={<Addcars />} />
-        </Routes>
       </div>
     </Router>
   );

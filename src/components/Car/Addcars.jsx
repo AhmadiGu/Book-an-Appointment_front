@@ -118,11 +118,9 @@ const AddCar = () => {
           />
         </div>
         <div className="input-group mb-3">
-          <span className="input-group-text" id="basic-addon3">
-            Add an Image
-          </span>
           <input
-            type="file"
+            type="text"
+            placeholder="Image URL"
             name="image"
             className="form-control"
             id="basic-url"
@@ -131,9 +129,6 @@ const AddCar = () => {
           />
         </div>
         <div className="input-group mb-3">
-          <span className="input-group-text" id="basic-addon3">
-            Year
-          </span>
           <input
             type="date"
             value={carData.year}

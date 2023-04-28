@@ -6,7 +6,7 @@ const Header = () => (
   <>
     <h1>
       <NavLink to="/" className="logo">
-        Tesla Cars Rental
+        Tecarena
       </NavLink>
     </h1>
     <nav>
