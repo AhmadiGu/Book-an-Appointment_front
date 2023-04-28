@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import { PropTypes } from 'prop-types';
-// import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import {
   BsFillArrowLeftCircleFill,
@@ -109,9 +107,5 @@ const ReservationAdd = () => {
     </div>
   );
 };
-// ReservationAdd.propTypes = {
-//   carId: PropTypes.number.isRequired,
-//   item: PropTypes.string.isRequired,
-// };
 
 export default ReservationAdd;

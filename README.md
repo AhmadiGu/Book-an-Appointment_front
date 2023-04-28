@@ -36,6 +36,7 @@
     <li><a href="https://react.dev/">React</a></li>
     <li><a href="https://redux.js.org/">Redux</a></li>
     <li><a href="https://bootstrap.com/">Bootstrap</a></li>
+    <li><a href="https://tailwindcss.com/">Tailwind</a></li>
   </ul>
 </details>
 
