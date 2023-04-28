@@ -12,22 +12,22 @@ const Header = () => (
     <nav>
       <ul>
         <li>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" className="active">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/signup" activeClassName="active">
+          <NavLink to="/signup" className="active">
             Sign up
           </NavLink>
         </li>
         <li>
-          <NavLink to="/login" activeClassName="active">
+          <NavLink to="/login" className="active">
             Log in
           </NavLink>
         </li>
         <li>
-          <NavLink to="/addcars" activeClassName="active">
+          <NavLink to="/addcars" className="active">
             Add Cars
           </NavLink>
         </li>
