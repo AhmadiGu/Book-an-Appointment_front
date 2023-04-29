@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Signup from './components/Signup/Signup';
-
 import Header from './components/Nav/Header';
 import Login from './components/Login/Login';
-import ReservationAdd from './components/Reservation/ReservationAdd';
 import ReservationNew from './components/Reservation/ReservationNew';
 import ReservedCars from './components/Reservation/ReservedCars';
 import Addcars from './components/Car/Addcars';
+import CarDetails from './components/Detials/CarsDetails';
 
 function App() {
   return (
@@ -19,13 +18,13 @@ function App() {
 
             <Route exact path="/login" element={<Login />} />
 
-            <Route exact path="/reservations" element={<ReservationAdd />} />
-
             <Route exact path="/new_reservations" element={<ReservationNew />} />
 
             <Route exact path="/reservedCars" element={<ReservedCars />} />
 
             <Route exact path="/addcars" element={<Addcars />} />
+
+            <Route exact path="/car_details" element={<CarDetails />} />
           </Routes>
         </div>
       </div>
