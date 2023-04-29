@@ -7,7 +7,7 @@ import {
 } from 'react-icons/bs';
 import { SlSettings } from 'react-icons/sl';
 import './carsDetails.css';
-import ReservationAdd from '../Reservation/ReservationAdd';
+import ReservationAdd from '../../Reservation/ReservationAdd';
 
 const CarDetails = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const CarDetails = () => {
   };
 
   const cars = [{
-    name: 'Toyota Camry', photo: '../../../images/reserave/reserve_car.jpg', description: 'Sedan car', price_per_day: 150, car_model: 'Camry 2022', user_id: 1,
+    name: 'Toyota Camry', photo: '../../../../images/reserave/reserve_car.jpg', description: 'Sedan car', price_per_day: 150, car_model: 'Camry 2022', user_id: 1,
   }];
 
   const carss = cars;
