@@ -25,15 +25,6 @@ const AddCar = () => (
       </div>
       <div className="w-full">
         <input
-          type="number"
-          placeholder="Test Drive Fee"
-          name="test_drive_fee"
-          className="form-control"
-          required
-        />
-      </div>
-      <div className="w-full">
-        <input
           type="text"
           placeholder="Model"
           name="model"
@@ -44,7 +35,7 @@ const AddCar = () => (
       <div className="w-full">
         <input
           type="number"
-          placeholder="Price"
+          placeholder="Price per day"
           name="price"
           className="form-control"
           required
@@ -58,14 +49,6 @@ const AddCar = () => (
           className="form-control"
           id="basic-url"
           aria-describedby="basic-addon3"
-        />
-      </div>
-      <div className="input-group mb-3">
-        <input
-          type="date"
-          name="year"
-          className="form-control"
-          required
         />
       </div>
       <button type="submit" className="btn btn-primary mb-3">Add Car</button>
