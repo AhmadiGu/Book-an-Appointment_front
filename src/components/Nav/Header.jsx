@@ -32,14 +32,14 @@ const Header = () => (
           </NavLink>
         </li>
         <li>
-          <NavLink to="reservations">Reservation</NavLink>
-        </li>
-        <li>
           <NavLink to="reservedCars">My Reservations</NavLink>
         </li>
 
         <li>
           <NavLink to="new_reservations">New Reservation</NavLink>
+        </li>
+        <li>
+          <NavLink to="car_details">Car Details</NavLink>
         </li>
 
       </ul>
