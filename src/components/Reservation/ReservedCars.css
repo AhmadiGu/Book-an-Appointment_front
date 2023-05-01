@@ -75,7 +75,7 @@ header {
 .empty {
   width: 6rem;
   height: 6rem;
-  background: url('../../../images/reserave/empty.png');
+  background: url('../../images/reserave/empty.png');
 }
 
 .mt-24 {

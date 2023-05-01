@@ -1,50 +1,151 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
+import {
+  UilCarSideview,
+  UilPlus,
+  UilBook,
+  UilPlusCircle,
+  UilTrashAlt, UilSignout, UilFacebook, UilInstagram, UilLinkedin, UilSlack, UilTwitter,
+} from '@iconscout/react-unicons';
 
-const Header = () => (
-  <>
-    <h1>
-      <NavLink to="/" className="logo">
-        Tecarena
-      </NavLink>
-    </h1>
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="/" className="active">
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/signup" className="active">
-            Sign up
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/login" className="active">
-            Log in
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/addcars" className="active">
-            Add Cars
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="reservedCars">My Reservations</NavLink>
-        </li>
+const Header = () => {
+  const [windowDimension, setWindowDimension] = useState(null);
 
-        <li>
-          <NavLink to="new_reservations">New Reservation</NavLink>
-        </li>
-        <li>
-          <NavLink to="car_details">Car Details</NavLink>
-        </li>
+  useEffect(() => {
+    setWindowDimension(window.innerWidth);
+  }, []);
 
-      </ul>
-    </nav>
-  </>
-);
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimension(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  if (windowDimension < 768) {
+    return (
+      <div className="header">
+        <nav className="navbar">
+          <ul className="navbar-nav">
+            <li className="nav-item mb-1">
+              <NavLink to="/" className="nav-link active p-3">
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item mb-1">
+              <NavLink to="/cars" className="nav-link p-3">
+                <UilCarSideview />
+              </NavLink>
+            </li>
+            <li className="nav-item mb-1">
+              <NavLink to="/addcars" className="nav-link p-3">
+                <UilPlusCircle />
+              </NavLink>
+            </li>
+            <li className="nav-item mb-1">
+              <NavLink to="/reservedCars" className="nav-link p-3">
+                <UilBook />
+              </NavLink>
+            </li>
+            <li className="nav-item mb-1">
+              <NavLink to="/new_reservations" className="nav-link p-3">
+                <UilPlus />
+              </NavLink>
+            </li>
+
+            <li className="nav-item mb-1">
+              <NavLink to="/new_reservations" className="nav-link p-3">
+                <UilTrashAlt />
+              </NavLink>
+            </li>
+            <li className="nav-item ">
+              <NavLink to="/new_reservations" className="nav-link p-3">
+                <UilSignout />
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/car_details" class="nav-link p-3">
+                Car Details
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    );
+  }
+  return (
+    <div className="header">
+      <nav className="navbar">
+        <h1>
+          <NavLink to="/" className="logo">
+            Tecarena
+          </NavLink>
+        </h1>
+        <ul className="navbar-nav">
+          <li className="nav-item mb-1">
+            <NavLink to="/" className="nav-link active p-3">
+              Home
+            </NavLink>
+          </li>
+          <li className="nav-item mb-1">
+            <NavLink to="/cars" className="nav-link p-3">
+              <UilCarSideview />
+              <span> Cars</span>
+            </NavLink>
+          </li>
+          <li className="nav-item mb-1">
+            <NavLink to="/addcars" className="nav-link p-3">
+              <UilPlusCircle />
+              <span> Add Cars</span>
+            </NavLink>
+          </li>
+          <li className="nav-item mb-1">
+            <NavLink to="/reservedCars" className="nav-link p-3">
+              <UilBook />
+              <span>My Reservations</span>
+            </NavLink>
+          </li>
+          <li className="nav-item mb-1">
+            <NavLink to="/new_reservations" className="nav-link p-3">
+              <UilPlus />
+              <span>New Reservation</span>
+            </NavLink>
+          </li>
+
+          <li className="nav-item mb-1">
+            <NavLink to="/new_reservations" className="nav-link p-3">
+              <UilTrashAlt />
+              <span>Delete Car</span>
+            </NavLink>
+          </li>
+          <li className="nav-item ">
+            <NavLink to="/new_reservations" className="nav-link p-3">
+              <UilSignout />
+              <span>Log Out</span>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink to="/car_details" class="nav-link p-3">
+              Car Details
+            </NavLink>
+          </li>
+        </ul>
+        <div className="media">
+          <ul className="media-ul">
+            <li><UilFacebook /></li>
+            <li><UilInstagram /></li>
+            <li><UilLinkedin /></li>
+            <li><UilSlack /></li>
+            <li><UilTwitter /></li>
+          </ul>
+          <p>Copyright &copy;. All rights reserved</p>
+        </div>
+      </nav>
+    </div>
+  );
+};
 
 export default Header;
