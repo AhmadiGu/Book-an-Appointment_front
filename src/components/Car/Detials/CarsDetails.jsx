@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'; 
+import { useParams, useNavigate } from 'react-router-dom';
 import { AiOutlineRight } from 'react-icons/ai';
+import { useSelector } from 'react-redux';
 import {
   BsArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
@@ -11,18 +12,19 @@ import ReservationAdd from '../../Reservation/ReservationAdd';
 
 const CarDetails = () => {
   const navigate = useNavigate();
+  const carDetails = useSelector((state) => state.cars); 
+  console.log('cars',carDetails);
 
   const [showReservationAdd, setShowReservationAdd] = useState(false);
   const handleReservationClick = () => {
     setShowReservationAdd(true);
   };
-
-  const cars = [{
-    name: 'Toyota Camry', photo: '../../../images/reserave/reserve_car.jpg', description: 'Sedan car', price_per_day: 150, car_model: 'Camry 2022', user_id: 1,
-  }];
-
-  const carss = cars;
-
+  const { id } = useParams();
+  console.log('id', id)
+  const cars = carDetails; 
+  console.log('cars', cars)
+  const carss = cars?.find((c) => c.id === parseInt(id, 10));
+  console.log('carss', carss)
   if (!cars) {
     return (
       <div className="empty-message">
@@ -38,7 +40,7 @@ const CarDetails = () => {
 
   return (
     <>
-      {carss.map((carss) => (
+      {carss && (
         <div key={carss.id} className="details-con p-5 ">
           <div className="details-img">
             <img
@@ -48,7 +50,7 @@ const CarDetails = () => {
             />
           </div>
           <div className="details-info">
-            <div className="details-text">
+            <div className="details-text ">
               <h1 className="text-name">
                 {carss?.name}
               </h1>
@@ -56,12 +58,12 @@ const CarDetails = () => {
                 {carss?.description}
               </p>
             </div>
-            <div className="other">
+            <div className="other ">
               <div className="other-cont p-3">
                 <div className=" other-title ">
                   <h3 className="other-h">Other Details</h3>
                 </div>
-                <ul className=" other-ul">
+                <ul className="other-ul">
                   <li className="other-li ">
                     <div>
                       <span className="pr-10">Model</span>
@@ -114,12 +116,11 @@ const CarDetails = () => {
             </div>
           </div>
         </div>
-      ))}
+      )}
       {showReservationAdd && (
       <ReservationAdd
         carId={carss.id}
-        item={carss.name}
-
+        item={carss.name} 
       />
       )}
       <div>
