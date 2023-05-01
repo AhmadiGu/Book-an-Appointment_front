@@ -12,16 +12,16 @@ import ReservationAdd from '../../Reservation/ReservationAdd';
 
 const CarDetails = () => {
   const navigate = useNavigate();
-  const carDetails = useSelector((state) => state.cars); 
+  const carDetails = useSelector((state) => state.cars);
 
   const [showReservationAdd, setShowReservationAdd] = useState(false);
   const handleReservationClick = () => {
     setShowReservationAdd(true);
   };
-  const { id } = useParams(); 
-  const cars = carDetails; 
+  const { id } = useParams();
+  const cars = carDetails;
   const carss = cars?.find((c) => c.id === parseInt(id, 10));
- 
+
   if (!cars) {
     return (
       <div className="empty-message">
