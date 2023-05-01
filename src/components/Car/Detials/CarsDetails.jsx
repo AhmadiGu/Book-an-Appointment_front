@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { AiOutlineRight } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
@@ -13,18 +13,15 @@ import ReservationAdd from '../../Reservation/ReservationAdd';
 const CarDetails = () => {
   const navigate = useNavigate();
   const carDetails = useSelector((state) => state.cars); 
-  console.log('cars',carDetails);
 
   const [showReservationAdd, setShowReservationAdd] = useState(false);
   const handleReservationClick = () => {
     setShowReservationAdd(true);
   };
-  const { id } = useParams();
-  console.log('id', id)
+  const { id } = useParams(); 
   const cars = carDetails; 
-  console.log('cars', cars)
   const carss = cars?.find((c) => c.id === parseInt(id, 10));
-  console.log('carss', carss)
+ 
   if (!cars) {
     return (
       <div className="empty-message">
@@ -120,7 +117,7 @@ const CarDetails = () => {
       {showReservationAdd && (
       <ReservationAdd
         carId={carss.id}
-        item={carss.name} 
+        item={carss.name}
       />
       )}
       <div>

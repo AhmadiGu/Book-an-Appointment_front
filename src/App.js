@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/new_reservations" element={<ReservationNew />} />
             <Route exact path="/reservedCars" element={<ReservedCars />} />
             <Route exact path="/addcars" element={<AddCar />} />
-            <Route exact path= "cars/:id" element={<CarDetails />} />
+            <Route exact path="cars/:id" element={<CarDetails />} />
           </Routes>
         </div>
       </div>

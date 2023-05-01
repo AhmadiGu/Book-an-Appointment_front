@@ -66,7 +66,7 @@ const Header = () => {
                 <UilSignout />
               </NavLink>
             </li>
-          
+
           </ul>
         </nav>
       </div>
@@ -123,7 +123,7 @@ const Header = () => {
               <span>Log Out</span>
             </NavLink>
           </li>
-          
+
         </ul>
         <div className="media">
           <ul className="media-ul">
