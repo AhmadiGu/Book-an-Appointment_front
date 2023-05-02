@@ -1,34 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux'; 
-import  getReservations  from '../../redux/actions/reservationsGet';
+import { useDispatch, useSelector } from 'react-redux';
+import getReservations from '../../redux/actions/reservationsGet';
 import './ReservedCars.css';
 
-const ReservedCars = () => { 
+const ReservedCars = () => {
   const dispatch = useDispatch();
   const reservations = useSelector((state) => state.reservations);
   const data = reservations.reservations;
   const [reservedCars, setReservedCars] = useState([]);
 
-  useEffect(() => { 
+  useEffect(() => {
     dispatch(getReservations());
-
   }, [dispatch]);
-  
+
   useEffect(() => {
     const filteredData = async () => {
-      const dataReserve = data.filter((item) => {
-        return item.user_id === 10;
-      });
-      setReservedCars(dataReserve);
-      console.log('filteredData', dataReserve);
+      const dataReserve = data.filter((item) => item.user_id === 10);
+      setReservedCars(dataReserve); 
     };
     filteredData();
-  }, [reservations]); 
- 
-   console.log('data',  data);
-   console.log('resved',  reservedCars);
-  console.log('reservations l', reservations);
- 
+  }, [reservations]);
+
 
   if (Array.from(reservedCars).length === 0) {
     return (
@@ -70,7 +62,9 @@ const ReservedCars = () => {
                 <td>{car.city}</td>
                 <td>{car.date}</td>
                 <td>
-                  {car.duration} days
+                  {car.duration}
+                  {' '}
+                  days
                 </td>
               </tr>
             ))}
