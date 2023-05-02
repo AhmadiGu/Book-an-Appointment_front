@@ -21,7 +21,7 @@ const ReservationAdd = ({ item, carId }) => {
 
   useEffect(() => {
     dispatch(createReservation(reservationData));
-  }, [dispatch]);
+  }, [dispatch, reservationData]);
 
   const handleDateChange = (e) => {
     setReservationData({ ...reservationData, date: e.target.value });
