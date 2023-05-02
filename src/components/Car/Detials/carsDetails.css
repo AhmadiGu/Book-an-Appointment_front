@@ -74,7 +74,6 @@
   aspect-ratio: 1 / 1;
   display: block;
   margin: 1rem;
-  background-color: aqua;
 }
 
 .text-name {
@@ -96,13 +95,14 @@
 .other {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
 .other-cont {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  width: 100%;
   overflow: hidden;
   border: 1px solid rgb(187, 188, 190);
   border-radius: 1rem;
@@ -130,21 +130,37 @@
   list-style: none;
 }
 
+.other-ul li:nth-child(even) {
+  background-color: rgba(206, 243, 184, 0.966);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  margin-bottom: 10px;
+  height: 80px !important;
+}
+
 .other-ul li:nth-child(odd) {
   background-color: rgb(229 231 235);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  margin-bottom: 10px;
+  height: 80px !important;
+  text-align: center;
 }
 
 ul.other-ul li div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
   text-transform: capitalize;
   font-size: 1.35rem;
   font-weight: 400;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .pr-10 {

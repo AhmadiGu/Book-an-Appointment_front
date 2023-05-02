@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import fetchCars from '../../redux/actions/carsActions';
 import './Cars.css';
 
@@ -20,6 +21,9 @@ const Cars = () => {
             <img src={car.photo} alt={car.name} className="car-img" />
             <h4 className="car-name">{car.name}</h4>
             <p className="car-description">{car.description}</p>
+            <Link to={`/cars/${car.id}`} className="car-link">
+              details
+            </Link>
           </li>
         ))}
       </ul>

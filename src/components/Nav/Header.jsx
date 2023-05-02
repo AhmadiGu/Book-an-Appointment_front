@@ -66,11 +66,7 @@ const Header = () => {
                 <UilSignout />
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to="/car_details" class="nav-link p-3">
-                Car Details
-              </NavLink>
-            </li>
+
           </ul>
         </nav>
       </div>
@@ -127,11 +123,7 @@ const Header = () => {
               <span>Log Out</span>
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink to="/car_details" class="nav-link p-3">
-              Car Details
-            </NavLink>
-          </li>
+
         </ul>
         <div className="media">
           <ul className="media-ul">
