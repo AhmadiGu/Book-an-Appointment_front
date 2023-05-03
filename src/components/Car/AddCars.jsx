@@ -1,46 +1,46 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
-import { createCar } from "../../redux/car/car";
-import "../Car/AddCars.css";
-import loader from "../../assets/loader2.gif";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { createCar } from '../../redux/car/car';
+import './AddCars.css';
+import loader from '../../assets/loader2.gif';
 
 const AddCar = () => {
   const [carData, setCarData] = useState({
-    name: "",
-    description: "",
-    price: "",
+    name: '',
+    description: '',
+    price: '',
     image: null,
-    test_drive_fee: "",
-    model: "",
-    year: "",
+    test_drive_fee: '',
+    model: '',
+    year: '',
   });
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-  const gohome = () => navigate("/");
+  const gohome = () => navigate('/');
   const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsLoading(true);
     if (!carData.image) {
-      toast.error("Please select an image for the car");
+      toast.error('Please select an image for the car');
       setIsLoading(false);
       return;
     }
     const data = new FormData();
-    data.append("car[name]", carData.name);
-    data.append("car[description]", carData.description);
-    data.append("car[price]", carData.price);
-    data.append("car[image]", carData.image);
-    data.append("car[test_drive_fee]", carData.test_drive_fee);
-    data.append("car[model]", carData.model);
-    data.append("car[year]", carData.year);
+    data.append('car[name]', carData.name);
+    data.append('car[description]', carData.description);
+    data.append('car[price]', carData.price);
+    data.append('car[image]', carData.image);
+    data.append('car[test_drive_fee]', carData.test_drive_fee);
+    data.append('car[model]', carData.model);
+    data.append('car[year]', carData.year);
 
     dispatch(createCar(data)).then(() => {
       gohome();
-      toast.info("Created Car Successfully");
+      toast.info('Created Car Successfully');
       setIsLoading(false);
     });
   };
@@ -148,7 +148,7 @@ const AddCar = () => {
           {isLoading ? (
             <img src={loader} alt="loading" className="spinner" />
           ) : (
-            "Add Car"
+            'Add Car'
           )}
         </button>
       </form>
