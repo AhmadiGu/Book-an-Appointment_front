@@ -6,7 +6,10 @@ const createReservation = (reservationData) => (dispatch) => {
     .then((response) => {
       dispatch({
         type: 'CREATE_RESERVATION_SUCCESS',
-        payload: response.data.reservation,
+        payload: {
+          reservation: response.data.reservation,
+          status: response.status,
+        },
       });
     })
     .catch((error) => {

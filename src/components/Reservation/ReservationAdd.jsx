@@ -1,18 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types'; // Import PropTypes
 import {
   BsFillArrowLeftCircleFill,
 } from 'react-icons/bs';
 import styles from './ReserveAdd.module.css';
+import createReservation from '../../redux/actions/reservationsActions';
 
-const ReservationAdd = () => {
+const ReservationAdd = ({ item, carId }) => {
   const [reservationData, setReservationData] = useState({
     date: '',
     city: '',
     duration: '',
-    car_id: '',
+    car_id: carId,
   });
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const reservation = useSelector((state) => state.reservation);
+
+  useEffect(() => {
+    dispatch(createReservation(reservationData));
+  }, [dispatch, reservationData]);
 
   const handleDateChange = (e) => {
     setReservationData({ ...reservationData, date: e.target.value });
@@ -28,7 +37,22 @@ const ReservationAdd = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const reservation = {
+      date: reservationData.date,
+      item,
+      city: reservationData.city,
+      duration: parseInt(reservationData.duration, 10),
+      user_id: 10,
+      car_id: reservationData.car_id,
+    };
+
+    dispatch(createReservation(reservation));
   };
+
+  if (reservation.status === 'succeeded') {
+    navigate('/reservedCars');
+  }
+
   return (
     <div className={styles.main}>
       <div className={styles.form_containers}>
@@ -41,6 +65,8 @@ const ReservationAdd = () => {
           <form onSubmit={handleSubmit} className={styles.formss}>
             <h2 className={styles.header_title}>
               Make reservation for
+              {' '}
+              {item}
 
             </h2>
             <div className={styles.line} />
@@ -65,7 +91,7 @@ const ReservationAdd = () => {
                 type="text"
                 id="item"
                 name="item"
-                value={reservationData.car_id}
+                value={item}
                 className={styles.form_inputs}
               />
             </div>
@@ -106,6 +132,12 @@ const ReservationAdd = () => {
       </div>
     </div>
   );
+};
+
+// Define the propTypes object
+ReservationAdd.propTypes = {
+  item: PropTypes.string.isRequired,
+  carId: PropTypes.number.isRequired,
 };
 
 export default ReservationAdd;

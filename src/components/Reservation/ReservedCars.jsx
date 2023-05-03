@@ -1,8 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import getReservations from '../../redux/actions/reservationsGet';
 import './ReservedCars.css';
 
 const ReservedCars = () => {
-  const [reservedCars] = useState([]);
+  const dispatch = useDispatch();
+  const reservations = useSelector((state) => state.reservations);
+  const data = reservations.reservations;
+  const [reservedCars, setReservedCars] = useState([]);
+
+  useEffect(() => {
+    dispatch(getReservations());
+  }, [dispatch]);
+
+  useEffect(() => {
+    const filteredData = async () => {
+      const dataReserve = data.filter((item) => item.user_id === 11);
+      setReservedCars(dataReserve);
+    };
+    filteredData();
+  }, [reservations, data]);
 
   if (Array.from(reservedCars).length === 0) {
     return (
@@ -38,16 +55,18 @@ const ReservedCars = () => {
 
           <tbody>
 
-            <tr key="car.id">
-              <td>car.car_name</td>
-              <td>car.city</td>
-              <td>car.date</td>
-              <td>
-                car.duration
-                {' '}
-                days
-              </td>
-            </tr>
+            {reservedCars.map((car) => (
+              <tr key={car.id}>
+                <td>{car.item}</td>
+                <td>{car.city}</td>
+                <td>{car.date}</td>
+                <td>
+                  {car.duration}
+                  {' '}
+                  days
+                </td>
+              </tr>
+            ))}
 
           </tbody>
         </table>
