@@ -15,7 +15,7 @@ const ReservedCars = () => {
 
   useEffect(() => {
     const filteredData = async () => {
-      const dataReserve = data.filter((item) => item.user_id === 10);
+      const dataReserve = data.filter((item) => item.user_id === 11);
       setReservedCars(dataReserve);
     };
     filteredData();
@@ -27,7 +27,7 @@ const ReservedCars = () => {
         <div className="max-w-screen-xl mx-auto px-4  text-center md-px-8">
           <div className="title">
             <h3 className=" title-h3 text-gray-800 text-3xl font-semibold sm-text-4xl">
-              YOUR CAR RESERVATION DETAILS WAIT PLEACE SOME MIN
+              YOUR CAR RESERVATION DETAILS
             </h3>
           </div>
           <div className="mt-24 items-center empty-dev">

@@ -31,38 +31,38 @@ const Header = () => {
         <nav className="navbar">
           <ul className="navbar-nav">
             <li className="nav-item mb-1">
-              <NavLink to="/" className="nav-link active p-3">
+              <NavLink to="/" className="nav-link active  p-1">
                 Home
               </NavLink>
             </li>
             <li className="nav-item mb-1">
-              <NavLink to="/cars" className="nav-link p-3">
+              <NavLink to="/cars" className="nav-link   p-1">
                 <UilCarSideview />
               </NavLink>
             </li>
             <li className="nav-item mb-1">
-              <NavLink to="/addcars" className="nav-link p-3">
+              <NavLink to="/addcars" className="nav-link   p-1">
                 <UilPlusCircle />
               </NavLink>
             </li>
             <li className="nav-item mb-1">
-              <NavLink to="/reservedCars" className="nav-link p-3">
+              <NavLink to="/reservedCars" className="nav-link   p-1">
                 <UilBook />
               </NavLink>
             </li>
             <li className="nav-item mb-1">
-              <NavLink to="/new_reservations" className="nav-link p-3">
+              <NavLink to="/new_reservations" className="nav-link   p-1">
                 <UilPlus />
               </NavLink>
             </li>
 
             <li className="nav-item mb-1">
-              <NavLink to="/new_reservations" className="nav-link p-3">
+              <NavLink to="/new_reservations" className="nav-link   p-1">
                 <UilTrashAlt />
               </NavLink>
             </li>
             <li className="nav-item ">
-              <NavLink to="/new_reservations" className="nav-link p-3">
+              <NavLink to="/new_reservations" className="nav-link   p-1">
                 <UilSignout />
               </NavLink>
             </li>
@@ -82,12 +82,12 @@ const Header = () => {
         </h1>
         <ul className="navbar-nav">
           <li className="nav-item mb-1">
-            <NavLink to="/" className="nav-link active p-3">
+            <NavLink to="/" className="nav-link active  p-3">
               Home
             </NavLink>
           </li>
           <li className="nav-item mb-1">
-            <NavLink to="/cars" className="nav-link p-3">
+            <NavLink to="/cars" className="nav-link  p-3">
               <UilCarSideview />
               <span> Cars</span>
             </NavLink>

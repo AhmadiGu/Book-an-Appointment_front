@@ -204,15 +204,26 @@ ul.other-ul li div {
 }
 
 .back-btn {
-  font-size: 2.3rem;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(152 189 42);
+  background-color: transparent;
   border-radius: 9999px;
   z-index: 10;
-  left: 9.2rem;
+  left: 2.2rem;
   bottom: 2.5rem;
   position: fixed;
+  font-size: 20px;
+
+  /* //box-shadow: 2px 4px 6px rgb(152 189 42); */
+}
+
+.back-btn svg {
+  width: 38px;
+  height: 38px;
+  font-size: 1.5rem;
+  color: rgb(152 189 42);
+}
+
+.back-btn:active {
+  background-color: transparent;
 }
 
 @media (min-width: 768px) {
