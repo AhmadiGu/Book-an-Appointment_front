@@ -23,6 +23,18 @@ export const createCar = createAsyncThunk(
   },
 );
 
+export const deleteCar = createAsyncThunk(
+  'delete/deleteCar',
+  async (id, thunkAPI) => {
+    try {
+      const response = await axios.delete(`${BASE_URL}/${id}`);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data);
+    }
+  },
+);
+
 const createCarSlice = createSlice({
   name: 'newCar',
   initialState,
@@ -38,6 +50,18 @@ const createCarSlice = createSlice({
         IsFulfilled.status = 'fulfilled';
       })
       .addCase(createCar.rejected, (state) => {
+        const IsRejected = state;
+        IsRejected.status = 'rejected';
+      })
+      .addCase(deleteCar.pending, (state) => {
+        const IsPending = state;
+        IsPending.status = 'pending';
+      })
+      .addCase(deleteCar.fulfilled, (state) => {
+        const IsFulfilled = state;
+        IsFulfilled.status = 'fulfilled';
+      })
+      .addCase(deleteCar.rejected, (state) => {
         const IsRejected = state;
         IsRejected.status = 'rejected';
       });
