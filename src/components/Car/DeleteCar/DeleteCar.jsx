@@ -1,23 +1,28 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import Header from '../../Nav/Header';
+import React ,{useEffect , useState}from 'react';
+import { useSelector, useDispatch } from 'react-redux'; 
+import fetchCars from '../../../redux/actions/carsActions';
 import { removeCarFromAPI } from '../../../redux/reducers/carsReducer';
 import './delete.css';
 
 const DeleteCar = () => {
   const cars = useSelector((state) => state.cars);
+  const [deleteData, setDeleteData] = useState(cars);
+
+  console.log('cars', cars);
   const dispatch = useDispatch();
-  const handleDelete = (id) => {
-    dispatch(removeCarFromAPI(id));
+  
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]); 
+
+  const handleDelete = (id) => { 
+    setDeleteData(dispatch(removeCarFromAPI(id)));
     window.location.reload();
   };
-
+  console.log('deleteData', deleteData);
   return (
     <div className="homepage">
-      <div className="flex h-screen bg-white">
-        <div className="hidden lg:flex lg:flex-shrink-0">
-          <Header />
-        </div>
+      <div className="flex h-screen bg-white"> 
         <div className="flex flex-col flex-1 min-w-0 mt-32 lg:mt-1">
           <div className="flex flex-col items-center">
             <h1 className="title">Remove car</h1>

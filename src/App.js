@@ -24,7 +24,7 @@ function App() {
             <Route exact path="/new_reservations" element={<ReservationNew />} />
             <Route exact path="/reservedCars" element={<ReservedCars />} />
             <Route exact path="/addcars" element={<AddCar />} />
-            <Route exact path="/deleteCar" component={<DeleteCar />} />
+            <Route exact path="/deleteCar" element={<DeleteCar />} />
             <Route exact path="cars/:id" element={<CarDetails />} />
           </Routes>
         </div>

@@ -57,7 +57,7 @@ const Header = () => {
             </li>
 
             <li className="nav-item mb-1">
-              <NavLink to="/new_reservations" className="nav-link   p-1">
+              <NavLink to="/deleteCar" className="nav-link   p-1">
                 <UilTrashAlt />
               </NavLink>
             </li>
@@ -112,7 +112,7 @@ const Header = () => {
           </li>
 
           <li className="nav-item mb-1">
-            <NavLink to="/new_reservations" className="nav-link p-3">
+            <NavLink to="/deleteCar" className="nav-link p-3">
               <UilTrashAlt />
               <span>Delete Car</span>
             </NavLink>
