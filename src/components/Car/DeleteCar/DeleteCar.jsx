@@ -1,5 +1,5 @@
-import React ,{useEffect , useState}from 'react';
-import { useSelector, useDispatch } from 'react-redux'; 
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import fetchCars from '../../../redux/actions/carsActions';
 import { removeCarFromAPI } from '../../../redux/reducers/carsReducer';
 import './delete.css';
@@ -10,19 +10,19 @@ const DeleteCar = () => {
 
   console.log('cars', cars);
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(fetchCars());
-  }, [dispatch]); 
+  }, [dispatch]);
 
-  const handleDelete = (id) => { 
+  const handleDelete = (id) => {
     setDeleteData(dispatch(removeCarFromAPI(id)));
     window.location.reload();
   };
   console.log('deleteData', deleteData);
   return (
     <div className="homepage">
-      <div className="flex h-screen bg-white"> 
+      <div className="flex h-screen bg-white">
         <div className="flex flex-col flex-1 min-w-0 mt-32 lg:mt-1">
           <div className="flex flex-col items-center">
             <h1 className="title">Remove car</h1>
