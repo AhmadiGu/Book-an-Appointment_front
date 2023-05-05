@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import fetchCars from "../../redux/actions/carsActions";
+import fetchCars from "../../redux/actions/addCarsActions";
 
 const Cars = () => {
   const dispatch = useDispatch();
