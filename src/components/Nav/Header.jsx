@@ -77,7 +77,11 @@ const Header = () => {
       <nav className="navbar">
         <h1>
           <NavLink to="/" className="logo">
-           <span>Auto</span>  <div className='logo-icon'></div> <span>Rentals</span>
+            <span>Auto</span>
+            {' '}
+            <div className="logo-icon" />
+            {' '}
+            <span>Rentals</span>
           </NavLink>
         </h1>
         <ul className="navbar-nav">
