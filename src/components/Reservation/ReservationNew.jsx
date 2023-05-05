@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  BsFillArrowLeftCircleFill,
-} from 'react-icons/bs';
-import fetchCars from '../../redux/actions/carsActions';
+import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
+import fetchCars from '../../redux/actions/addCarsActions';
 import createReservation from '../../redux/actions/reservationsActions';
 import './ReservationNew.css';
 
@@ -77,7 +75,12 @@ const ReservationNew = () => {
       ) : (
         <div className="forms-container">
           <div className="back-button-div">
-            <button type="button" className="back-button" id="back-arrow" onClick={() => navigate(-1)}>
+            <button
+              type="button"
+              className="back-button"
+              id="back-arrow"
+              onClick={() => navigate(-1)}
+            >
               <BsFillArrowLeftCircleFill />
             </button>
           </div>
@@ -86,13 +89,11 @@ const ReservationNew = () => {
               <h2 className="headers-title">Reserve a car</h2>
               <div className="lines" />
               <p className="infos">
-                There are 34 different versions of the Vesper. Today five series are in
-                production: the classic manual transmission PX and the modern CVT
-                transmission S, LX, GT, and GTS.
-                We have showrooms all over the globe which some include
-                test-riding facilities.
-                If you wish to find out if a
-                test-ride, please make reservation.
+                There are 34 different versions of the Vesper. Today five series
+                are in production: the classic manual transmission PX and the
+                modern CVT transmission S, LX, GT, and GTS. We have showrooms
+                all over the globe which some include test-riding facilities. If
+                you wish to find out if a test-ride, please make reservation.
               </p>
               <div className="input-wrapper">
                 <input
@@ -153,7 +154,9 @@ const ReservationNew = () => {
                   placeholder="Duration in days"
                 />
               </div>
-              <button type="submit" className="form-submit"><div className="text-res">Reserve</div></button>
+              <button type="submit" className="form-submit">
+                <div className="text-res">Reserve</div>
+              </button>
             </form>
           </div>
         </div>

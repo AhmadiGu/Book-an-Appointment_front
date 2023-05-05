@@ -13,14 +13,20 @@ function App() {
   return (
     <Router>
       <div className="App row">
-        <div className="menu fixed left-0 top-0 bottom-0 h-screen w-52 shadow-lg py-10 px-4 fade-in col-2"><Header /></div>
+        <div className="menu fixed left-0 top-0 bottom-0 h-screen w-52 shadow-lg py-10 px-4 fade-in col-2">
+          <Header />
+        </div>
         <div className="content col-10">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/cars" element={<Cars />} />
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/login" element={<Login />} />
-            <Route exact path="/new_reservations" element={<ReservationNew />} />
+            <Route
+              exact
+              path="/new_reservations"
+              element={<ReservationNew />}
+            />
             <Route exact path="/reservedCars" element={<ReservedCars />} />
             <Route exact path="/addcars" element={<AddCar />} />
             <Route exact path="cars/:id" element={<CarDetails />} />
