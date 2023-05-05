@@ -1,15 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const BASE_URL = "http://localhost:3000/api/v1/cars";
+const BASE_URL = 'http://localhost:3000/api/v1/cars';
 
 const initialState = {
   status: null,
 };
 
 export const createCar = createAsyncThunk(
-  "create/createCar",
+  'create/createCar',
   async (payload, thunkAPI) => {
     try {
       const response = await axios.post(BASE_URL, payload, {
@@ -19,26 +19,26 @@ export const createCar = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
     }
-  }
+  },
 );
 
 const createCarSlice = createSlice({
-  name: "newCar",
+  name: 'newCar',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(createCar.pending, (state) => {
         const IsPending = state;
-        IsPending.status = "pending";
+        IsPending.status = 'pending';
       })
       .addCase(createCar.fulfilled, (state) => {
         const IsFulfilled = state;
-        IsFulfilled.status = "fulfilled";
+        IsFulfilled.status = 'fulfilled';
       })
       .addCase(createCar.rejected, (state) => {
         const IsRejected = state;
-        IsRejected.status = "rejected";
+        IsRejected.status = 'rejected';
       });
   },
 });
