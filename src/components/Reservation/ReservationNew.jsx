@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
-import fetchCars from '../../redux/actions/addCarsActions.js';
+import fetchCars from '../../redux/actions/addCarsActions';
 import createReservation from '../../redux/actions/reservationsActions';
 import './ReservationNew.css';
 
