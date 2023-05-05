@@ -1,9 +1,16 @@
 const initialState = [];
 
-const carsReducer = (state = initialState, action) => {
+const carsReducer = (state = [], action) => {
   switch (action.type) {
-    case 'FETCH_CARS':
+    case "GET_ALL_CARS/fulfilled": {
       return action.payload;
+    }
+    case "ADD_CAR/fulfilled": {
+      return [...state, action.payload];
+    }
+    case "DELETE_CAR/fulfilled": {
+      return state.filter((f) => f.id !== action.payload);
+    }
     default:
       return state;
   }
