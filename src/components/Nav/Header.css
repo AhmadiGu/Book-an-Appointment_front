@@ -1,7 +1,18 @@
 /* Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
+
 .menu {
   margin-top: 20%;
   height: 65.5vh;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background:
+    url(../../images/favicon.png)
+    no-repeat center center;
+  background-size: cover;
 }
 
 .header {
@@ -13,8 +24,14 @@
 
 .logo {
   color: #303030;
-  font-size: 24px;
+  font-size: 34px;
+  font-weight: 700;
+  font-family: Waterfall, sans-serif;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 nav {

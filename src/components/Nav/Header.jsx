@@ -77,7 +77,7 @@ const Header = () => {
       <nav className="navbar">
         <h1>
           <NavLink to="/" className="logo">
-            Tecarena
+           <span>Auto</span>  <div className='logo-icon'></div> <span>Rentals</span>
           </NavLink>
         </h1>
         <ul className="navbar-nav">
