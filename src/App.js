@@ -8,12 +8,13 @@ import CarDetails from './components/Car/Detials/CarsDetails';
 import Cars from './components/Car/Cars';
 import AddCar from './components/Car/AddCars';
 import Home from './components/Home/Home';
+import DeleteCar from './components/Car/DeleteCar/DeleteCar';
 
 function App() {
   return (
     <Router>
       <div className="App row">
-        <div className="menu fixed left-0 top-0 bottom-0 h-screen w-52 shadow-lg py-10 px-4 fade-in col-2"><Header /></div>
+        <div className="fixed top-0 bottom-0 left-0 h-screen px-4 py-10 shadow-lg menu w-52 fade-in col-2"><Header /></div>
         <div className="content col-10">
           <Routes>
             <Route exact path="/" element={<Home />} />
@@ -23,6 +24,7 @@ function App() {
             <Route exact path="/new_reservations" element={<ReservationNew />} />
             <Route exact path="/reservedCars" element={<ReservedCars />} />
             <Route exact path="/addcars" element={<AddCar />} />
+            <Route exact path="/deleteCar" element={<DeleteCar />} />
             <Route exact path="cars/:id" element={<CarDetails />} />
           </Routes>
         </div>
